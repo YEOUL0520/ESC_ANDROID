@@ -1,7 +1,8 @@
+
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
-//    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -42,6 +43,12 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.junit)
+    implementation(libs.androidx.junit)
+    implementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.constraintlayout)
 
     val composeBom = platform("androidx.compose:compose-bom:2026.03.00")
     implementation(composeBom)
