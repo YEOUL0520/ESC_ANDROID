@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name" translatable="false">Hyowon App</string>
+    <string name="github_logo_content_description" translatable="false">GitHub Logo</string>
 </resources>

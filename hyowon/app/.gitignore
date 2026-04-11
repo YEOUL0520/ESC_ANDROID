@@ -1,1 +1,49 @@
-/build
+# [ Built files ]
+# 빌드 시 생성되는 임시 파일 및 실행 파일 제외
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+captures/
+
+# [ Kotlin/Java ]
+# 컴파일러가 생성한 파일 제외
+*.kt.conversion.xml
+/ktx_binary_storage_
+.kotlin/
+
+# [ Android Studio & IntelliJ ]
+# IDE 개인 설정 및 캐시 파일 제외
+.idea/
+.gradle/
+local.properties
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
+/build.gradle.kts
+/settings.gradle.kts
+
+# 주의: 아래 파일들은 프로젝트 구조를 위해 포함하는 것이 좋으나, 
+# 만약 개별 설정을 완전히 배제하고 싶다면 추가하세요.
+# .idea/workspace.xml
+# .idea/libraries
+# .idea/modules.xml
+# *.iml
+
+# [ Firebase & Google Services ]
+# 보안을 위해 API 키가 포함된 설정 파일은 제외하는 것이 원칙입니다.
+# (단, 팀 프로젝트에서 설정을 공유해야 한다면 포함하기도 합니다.)
+# google-services.json
+
+# [ OS generated files ]
+# 운영체제에서 생성하는 불필요한 파일 제외
+.DS_Store
+Thumbs.db
+
+# [ Log files ]
+*.log

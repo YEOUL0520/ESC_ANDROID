@@ -1,13 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-   Sample backup rules file; uncomment and customize as necessary.
-   See https://developer.android.com/guide/topics/data/autobackup
-   for details.
-   Note: This file is ignored for devices older than API 31
-   See https://developer.android.com/about/versions/12/backup-restore
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Auto Backup rules for Android 6.0 (API level 23) to Android 11 (API level 30).
+    These rules define which files and directories are backed up to the user's Google Drive.
+
+    For devices running Android 12 (API level 31) or higher, please refer to 'data_extraction_rules.xml'.
+
+    See https://developer.android.com/guide/topics/data/autobackup for details.
 -->
 <full-backup-content>
     <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
+        Common domains:
+        - "file": App's internal storage (getFilesDir())
+        - "database": App's internal databases (getDatabasePath())
+        - "sharedpref": SharedPreferences (getSharedPreferences())
+        - "external": App's external storage (getExternalFilesDir())
+        - "root": The root directory of the app's internal storage.
+
+        Examples:
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="device_specific_settings.xml"/>
+        <exclude domain="database" path="temporary_cache.db"/>
+    -->
+
+    <!-- Default behavior is to back up all app data. Uncomment and customize below if needed. -->
+    <!--
+    <include domain="sharedpref" path="."/>
+    <exclude domain="sharedpref" path="device.xml"/>
+    -->
 </full-backup-content>
