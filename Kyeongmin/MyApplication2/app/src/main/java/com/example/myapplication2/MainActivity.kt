@@ -49,31 +49,3 @@ fun MyApp() {
         }
     }
 }
-
-@Composable
-fun HomeScreen(navController: NavController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text("여기는 홈 화면입니다", fontSize = 24.sp)
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Button(onClick = {navController.navigate("detail")}) {Text("상세 화면으로 이동")}
-    }
-}
-
-@Composable
-fun DetailScreen(navController: NavController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text("여기는 상세 화면입니다", fontSize = 24.sp)
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Button(onClick = {navController.popBackStack()}) {Text("뒤로가기")}
-    }
-}
