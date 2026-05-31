@@ -45,45 +45,12 @@ class MainActivity : ComponentActivity() {
 fun MyApp() {
     val navController = rememberNavController()
 
-    NavHost(navController=navController, startDestination = "home") {
+    NavHost(navController = navController, startDestination = "home") {
         composable(route = "home") {
-            HomeScreen(navController=navController)
+            HomeScreen(navController = navController)
         }
         composable(route = "detail") {
-            DetailScreen(navController=navController)
-        }
-    }
-
-}
-
-@Composable
-fun HomeScreen(navController: NavHostController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text("여기는 홈 화면입니다.", fontSize = 24.sp)
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Button(onClick = {navController.navigate("detail")}) {
-            Text("상세 화면으로 이동", fontSize=12.sp)
-        }
-    }
-}
-
-@Composable
-fun DetailScreen(navController: NavController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text("여기는 상세 화면입니다", fontSize=24.sp)
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Button(onClick = {navController.navigate("home")}) {
-            Text("뒤로 가기")
+            DetailScreen(navController = navController)
         }
     }
 }
